@@ -1,5 +1,7 @@
 {
   "name": "electivo",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

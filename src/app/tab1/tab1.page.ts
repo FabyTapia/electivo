@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MenuService } from '../services/menu.service';
+
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +9,14 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(public menuService:MenuService){
+
+  }
+
+  // text = 'Default starting text';
+
+  // onChangeText(){
+  //   this.text = 'Changed!';
 
 }
+
