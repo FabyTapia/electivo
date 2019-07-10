@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { MenuService } from '../services/menu.service';
+import { NavController } from '@ionic/angular';
+import { Tab2Page } from '../tab2/tab2.page';
+;
 
 
 @Component({
@@ -9,14 +11,16 @@ import { MenuService } from '../services/menu.service';
 })
 export class Tab1Page {
 
-  constructor(public menuService:MenuService){
+  private name;
+  constructor(public navCtrl: NavController){
 
   }
+goToTab2Page(){
+  this.navCtrl.push(Tab2Page, 
+    {firstName:name}
 
-  // text = 'Default starting text';
-
-  // onChangeText(){
-  //   this.text = 'Changed!';
+  );
+}
 
 }
 

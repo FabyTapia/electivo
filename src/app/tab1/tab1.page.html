@@ -7,13 +7,12 @@
 </ion-header>
 
 <ion-content padding>
-    <p>{{text}}</p>
-    <ion-button (click)="onChangeText()">change text</ion-button>
-    <!-- <ion-grid>
-        <ion-row>
-            <ion-col width 33>1</ion-col>
-            <ion-col width 33>2</ion-col>
-            <ion-col width 33>3</ion-col>
-        </ion-row> 
-    </ion-grid>-->
+
+    <ion-list>
+        <ion-item>
+            <ion-label color="secondary" stacked>Nombre</ion-label>
+            <ion-input color="secondary" [(ngModel)]='name'></ion-input>
+        </ion-item>
+    </ion-list>
+    <button ion-button color="secondary" (click)="goToTab2Page()">Siguente</button>
 </ion-content>

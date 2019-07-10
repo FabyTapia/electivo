@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuService } from '../services/menu.service';
+import { NavParams, NavController } from '@ionic/angular';
 
 
 @Component({
@@ -8,8 +9,16 @@ import { MenuService } from '../services/menu.service';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  name;
 
-  constructor(public menuService:MenuService){
+  constructor(public menuService:MenuService, 
+              public NavCtrl :NavController,          
+              public NavParams:NavParams  ){
 
+        this.name = NavParams.get('name');        
+
+}
+ionViewDidLoad(){
+  
 }
 }
