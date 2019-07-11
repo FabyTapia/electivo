@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuService } from '../services/menu.service';
-import { NavParams, NavController } from '@ionic/angular';
+
 
 
 @Component({
@@ -9,16 +9,41 @@ import { NavParams, NavController } from '@ionic/angular';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-  name;
+  public menu:any[]=[];
+public menuToShow:any[]=[];//se crea nuevo arreglo para mostrar tipo
 
-  constructor(public menuService:MenuService, 
-              public NavCtrl :NavController,          
-              public NavParams:NavParams  ){
+public filterBy:string='Lunch';
 
-        this.name = NavParams.get('name');        
-
+  constructor(public menuService:MenuService){
 }
-ionViewDidLoad(){
+ionViewWillEnter(){
+    this.menu = this.menuService.getMenu();
+    this.updateMenuToShow();
+  }
   
-}
-}
+  updateMenuToShow(): void {
+    this.menuToShow = this.menu.filter(item => item.Type == this.filterBy);
+  }
+  
+  handleBreakfastClick(){
+    this.filterBy = "Breakfast";
+    this.updateMenuToShow()
+  }
+  handleLunchClick(){
+    this.filterBy = "Lunch";
+    this.updateMenuToShow()
+  }
+  
+  
+  }
+
+
+
+
+//propiedad privada solo se ve en este componente
+
+//llamo al menu desde service
+
+
+
+ 

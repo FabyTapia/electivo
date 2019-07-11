@@ -7,8 +7,15 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-item>
-        <ion-label fixed>From name: </ion-label>
-        <ion-label> {{name}} </ion-label>
-    </ion-item>
+
+    <ion-button expand="block" (click)="handleBreakfastClick()">Desayuno</ion-button>
+    <ion-button expand="block" (click)="handleBreakfastClick()">Almuerzo</ion-button>
+    <ion-list>
+        <ion-item *ngFor="let menuItem of menuToShow">
+            <ion-label> {{menuItem.Producto}}</ion-label>
+            <ion-label> {{menuItem.Valor}}</ion-label>
+            <ion-checkbox slot="end" [(ngModel)]=" menuItem.isChecked"></ion-checkbox>
+        </ion-item>
+    </ion-list>
+
 </ion-content>

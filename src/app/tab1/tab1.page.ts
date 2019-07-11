@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController } from '@ionic/angular';
-import { Tab2Page } from '../tab2/tab2.page';
-;
+
+
+
+
 
 
 @Component({
@@ -12,15 +13,10 @@ import { Tab2Page } from '../tab2/tab2.page';
 export class Tab1Page {
 
   private name;
-  constructor(public navCtrl: NavController){
+  constructor(){
 
   }
-goToTab2Page(){
-  this.navCtrl.push(Tab2Page, 
-    {firstName:name}
+  
+  }
 
-  );
-}
-
-}
 
