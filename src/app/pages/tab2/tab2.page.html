@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="tertiary">
         <ion-title>
             Menu
         </ion-title>
@@ -8,8 +8,8 @@
 
 <ion-content padding>
 
-    <ion-button expand="block" (click)="handleBreakfastClick()">Desayuno</ion-button>
-    <ion-button expand="block" (click)="handleBreakfastClick()">Almuerzo</ion-button>
+    <ion-button expand="block" color="tertiary" (click)="handleBreakfastClick()">Desayuno</ion-button>
+    <ion-button expand="block" color="tertiary" (click)="handleLunchClick()">Almuerzo</ion-button>
     <ion-list>
         <ion-item *ngFor="let menuItem of menuToShow">
             <ion-label> {{menuItem.Producto}}</ion-label>
