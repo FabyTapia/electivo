@@ -9,7 +9,9 @@ import { MenuService } from '../../services/menu.service';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-  public menu:any[]=[];
+
+
+public menu:any[]=[];
 public menuToShow:any[]=[];//se crea nuevo arreglo para mostrar tipo
 
 public filterBy:string='Lunch';

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 
@@ -12,10 +13,13 @@ export class Tab1Page {
 
   valor = ''; 
 
-  constructor(){
-
-  }
+  constructor(
+  private router: Router
+  ){}
   
+  pushTab2(){
+    this.router.navigate(['/tab2', this.valor])
+  }
   }
 
 

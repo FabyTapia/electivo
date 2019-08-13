@@ -7,10 +7,14 @@
 </ion-header>
 
 <ion-content padding>
+    <img src="../../../assets/img/logobq.png" alt="" srcset="">
+    <ion-card-subtitle>
+        <h5>Ingresar Nombre Cliente</h5>
+    </ion-card-subtitle>
     <ion-item>
         <ion-input placeholder="nombre" [(ngModel)]="valor"></ion-input>
     </ion-item>
-    <ion-button expand="full">
+    <ion-button color="tertiary" expand="full" (click)="pushTab2()">
         Siguiente
     </ion-button>
 
